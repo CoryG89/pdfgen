@@ -1,0 +1,40 @@
+{
+  "name": "pdfgen",
+  "version": "0.1.0",
+  "description": "PDF generation module for Node.JS",
+  "keywords": [
+    "PhantomJS",
+    "PDF"
+  ],
+  "author": {
+    "name": "Cory Gross",
+    "email": "CoryG89@gmail.com",
+    "url": "http://coryg89.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CoryG89/pdfgen"
+  },
+  "bugs": {
+    "url": "https://github.com/CoryG89/pdfgen/issues",
+    "email": "CoryG89@gmail.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/CoryG89/pdfgen/blob/master/LICENSE.md"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "mocha --reporter spec"
+  },
+  "dependencies": {
+    "node-phantom": "0.2.x",
+    "express": "3.4.x",
+    "phantomjs": "1.9.x"
+  },
+  "devDependencies": {
+    "mocha": "1.14.x",
+    "chai": "1.8.x"
+  }
+}
