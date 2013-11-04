@@ -16,6 +16,7 @@ var html = [
 describe('pdfgen', function () {
 
     it('should be initialized successfully', function (done) {
+        this.timeout(3000);
         var expectedSuccess = 'pdfgen: Successfully initialized';
         pdfgen.init(function (err, success) {
             should.not.exist(err);
@@ -47,7 +48,7 @@ describe('pdfgen', function () {
     });
 
     it('should render HTML successfully', function (done) {
-        var path = 'output.pdf';
+        var path = 'test/output.pdf';
         var expectedSuccess = util.format(renderMsg, path);
         pdfgen.render(html, path, function (err, success) {
             should.not.exist(err);
