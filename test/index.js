@@ -47,14 +47,15 @@ describe('pdfgen', function () {
     });
 
     it('should render HTML successfully', function (done) {
-        var outputFilename = 'output.pdf';
-        var expectedSuccess = util.format(renderMsg, outputFilename);
-        pdfgen.render(html, 'output.pdf', function (err, success) {
+        var path = 'output.pdf';
+        var expectedSuccess = util.format(renderMsg, path);
+        pdfgen.render(html, path, function (err, success) {
             should.not.exist(err);
             should.exist(success);
             success.should.equal(expectedSuccess);
-            fs.exists(outputFilename, function (exists) {
+            fs.exists(path, function (exists) {
                 exists.should.equal(true);
+                fs.unlink(path);
             });
             done();
         });
